@@ -28,6 +28,10 @@ jobs:
         echo "Listing home directory:"
         ls -la ~
 
+        echo "Installing git..."
+        sudo dnf install git -y
+        git --version
+
         echo "Installing Node.js..."
         if ! command -v nvm &> /dev/null; then
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
